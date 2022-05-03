@@ -1,0 +1,6 @@
+aconnect -lio
+// shows all midi devices
+aconnect 'Impulse':0 'Pure Data': 0
+// connects Impulse to Pure Data
+// audio settings without external soundcard:
+// ALSA, ALSA-MIDI
