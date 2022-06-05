@@ -1,0 +1,81 @@
+#N canvas 0 56 1280 703 12;
+#X obj 65 96 *~;
+#X obj 106 79 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -262130
+-1 -1 4600 1;
+#X obj 64 181 *~;
+#X text 133 58 Gain;
+#X text 121 174 Output;
+#X obj 122 193 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -261682
+-1 -1 0 1;
+#X obj 62 231 dac~;
+#X obj 115 145 delwrite~ audio-buffer 5000;
+#X obj 81 338 delread~ audio-buffer 0;
+#X obj 84 287 hsl 128 15 0 5000 0 0 empty empty empty -2 -8 0 10 -262130
+-1 -1 4700 1;
+#X text 95 267 Delay time;
+#X floatatom 81 313 5 0 0 0 - - -;
+#X obj 81 410 *~;
+#X obj 127 390 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262130
+-1 -1 4800 1;
+#X text 125 371 Delay volume;
+#X obj 76 450 dac~;
+#X obj 66 50 adc~ 2;
+#X obj 166 433 *~;
+#X obj 223 432 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262130
+-1 -1 12700 1;
+#X text 225 412 Feedback amount;
+#X obj 128 106 receive~ feedback-sig;
+#X obj 172 474 send~ feedback-sig;
+#X obj 453 73 *~;
+#X obj 494 56 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -262130
+-1 -1 5000 1;
+#X text 521 35 Gain;
+#X obj 454 27 adc~ 2;
+#X obj 499 207 *~;
+#X text 528 211 Output;
+#X obj 562 191 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -261682
+-1 -1 9200 1;
+#X obj 469 268 dac~;
+#X obj 394 152 *~;
+#X floatatom 364 112 5 0 1 0 - - -;
+#X text 363 90 Dry;
+#X obj 467 174 *~;
+#X text 559 105 Stereo reverb;
+#X obj 555 130 rev2~ 100 90 3000 20;
+#X floatatom 641 80 5 0 0 0 - - -;
+#X text 653 59 liveliness;
+#X floatatom 701 103 5 0 0 0 - - -;
+#X text 713 84 damp hf;
+#X obj 604 258 rev3~ 100 90 3000 20;
+#X connect 0 0 2 0;
+#X connect 0 0 7 0;
+#X connect 1 0 0 1;
+#X connect 2 0 6 0;
+#X connect 2 0 6 1;
+#X connect 5 0 2 1;
+#X connect 8 0 12 0;
+#X connect 9 0 11 0;
+#X connect 11 0 8 0;
+#X connect 12 0 15 0;
+#X connect 12 0 15 1;
+#X connect 12 0 17 0;
+#X connect 13 0 12 1;
+#X connect 16 0 0 0;
+#X connect 17 0 21 0;
+#X connect 18 0 17 1;
+#X connect 20 0 7 0;
+#X connect 22 0 35 0;
+#X connect 23 0 22 1;
+#X connect 25 0 22 0;
+#X connect 25 0 30 0;
+#X connect 26 0 29 1;
+#X connect 28 0 26 1;
+#X connect 28 0 33 1;
+#X connect 30 0 29 0;
+#X connect 30 0 29 1;
+#X connect 31 0 30 1;
+#X connect 33 0 29 0;
+#X connect 35 0 33 0;
+#X connect 35 1 26 0;
+#X connect 36 0 35 2;
+#X connect 38 0 35 4;

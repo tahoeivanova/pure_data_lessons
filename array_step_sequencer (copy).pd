@@ -1,0 +1,43 @@
+#N canvas 551 148 624 567 12;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array \$0-pitches 16 float 3;
+#A 0 60 62 64 65 67 69 71 72 74 76 77 78 81 83 84 86;
+#X coords 0 127 16 0 200 127 1 0 0;
+#X restore 346 26 graph;
+#X obj 353 249 array set \$0-pitches;
+#X msg 329 202 60 62 64 65 67 69 71 72 74 76 77 78 81 83 84 86;
+#X obj 46 291 array get \$0-pitches;
+#X obj 41 102 metro 0.25 120 permin;
+#X obj 29 70 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 43 131 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 67 51 tempo \$1 permin;
+#X floatatom 66 11 5 0 0 0 BPM - -;
+#X obj 43 161 f;
+#X obj 97 159 + 1;
+#X floatatom 43 191 5 0 0 0 - - -;
+#X obj 43 221 % 16;
+#X obj 43 253 hradio 15 1 0 16 empty empty empty 0 -8 0 10 -262144
+-1 -1 7;
+#X obj 50 477 pd_phasor;
+#X floatatom 35 433 5 0 0 0 - - -;
+#X floatatom 124 414 5 0 500 0 Slew - -;
+#X obj 161 456 hsl 128 15 0 1 0 0 empty empty Volume -2 -8 0 10 -262130
+-1 -1 0 1;
+#X connect 2 0 1 0;
+#X connect 3 0 15 0;
+#X connect 4 0 6 0;
+#X connect 5 0 4 0;
+#X connect 6 0 9 0;
+#X connect 7 0 4 0;
+#X connect 8 0 7 0;
+#X connect 9 0 10 0;
+#X connect 9 0 11 0;
+#X connect 10 0 9 1;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 3 0;
+#X connect 15 0 14 0;
+#X connect 16 0 14 1;
+#X connect 17 0 14 2;

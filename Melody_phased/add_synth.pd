@@ -7,8 +7,8 @@
 #X floatatom 207 128 5 0 0 0 - - -;
 #X obj 214 228 *~;
 #X floatatom 265 196 5 0 1 0 - - -;
-#X obj 164 384 *~;
-#X floatatom 201 299 5 0 1 0 - - -;
+#X obj 155 438 *~;
+#X floatatom 216 425 5 0 1 0 - - -;
 #X floatatom 239 41 5 0 0 0 - - -;
 #X obj 107 86 * 1;
 #X obj 200 90 * 2;
@@ -33,7 +33,12 @@
 #X floatatom 705 185 5 0 1 0 - - -;
 #X obj 640 79 * 6;
 #X obj 235 12 inlet;
-#X obj 167 437 outlet~;
+#X obj 783 169 osc~;
+#X floatatom 775 116 5 0 0 0 - - -;
+#X obj 782 216 *~;
+#X floatatom 833 184 5 0 1 0 - - -;
+#X obj 768 78 * 7;
+#X obj 391 639 outlet~;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
 #X connect 2 0 8 0;
@@ -42,7 +47,7 @@
 #X connect 5 0 4 0;
 #X connect 6 0 8 0;
 #X connect 7 0 6 1;
-#X connect 8 0 34 0;
+#X connect 8 0 39 0;
 #X connect 9 0 8 1;
 #X connect 10 0 11 0;
 #X connect 10 0 12 0;
@@ -50,6 +55,7 @@
 #X connect 10 0 26 0;
 #X connect 10 0 27 0;
 #X connect 10 0 32 0;
+#X connect 10 0 38 0;
 #X connect 11 0 1 0;
 #X connect 12 0 5 0;
 #X connect 13 0 15 0;
@@ -73,3 +79,8 @@
 #X connect 31 0 30 1;
 #X connect 32 0 29 0;
 #X connect 33 0 10 0;
+#X connect 34 0 36 0;
+#X connect 35 0 34 0;
+#X connect 36 0 8 0;
+#X connect 37 0 36 1;
+#X connect 38 0 35 0;

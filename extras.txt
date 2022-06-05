@@ -4,3 +4,6 @@ aconnect 'Impulse':0 'Pure Data': 0
 // connects Impulse to Pure Data
 // audio settings without external soundcard:
 // ALSA, ALSA-MIDI
+
+// if ALSA port is busy, kill you may default pulseaudio
+pulseaudio -k

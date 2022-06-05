@@ -37,10 +37,10 @@
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 1 1000 -1 200 140 1 0 0;
-#X restore 212 50 graph;
+#X restore 165 18 graph;
 #X obj 58 288 metro;
 #X floatatom 113 265 5 0 0 0 - - -;
-#X obj 44 258 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 44 258 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 35 13 Syn osc;
 #X obj 511 102 osc~;
@@ -50,7 +50,7 @@
 #X obj 370 265 dac~;
 #X obj 362 331 metro;
 #X floatatom 417 308 5 0 0 0 - - -;
-#X obj 348 301 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 348 301 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array \$2-square 1000 float 1;
@@ -97,7 +97,7 @@
 #X obj 60 653 dac~;
 #X obj 52 719 metro;
 #X floatatom 107 696 5 0 0 0 - - -;
-#X obj 38 689 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 38 689 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 85 515 *~ 2;
 #X obj 85 546 -~ 1;
@@ -108,7 +108,7 @@
 #X obj 642 661 dac~;
 #X obj 631 709 metro;
 #X floatatom 686 686 5 0 0 0 - - -;
-#X obj 617 679 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 617 679 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 625 413 Triangle osc;
 #X obj 24 334 tabwrite~ \$1-syn;
@@ -269,7 +269,7 @@
 #X restore 1047 390 graph;
 #X obj 778 280 metro;
 #X floatatom 833 257 5 0 0 0 - - -;
-#X obj 764 250 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 764 250 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 744 326 tabwrite~ \$5-waveform_output;
 #X obj 876 56 tabosc4~ waveform;
